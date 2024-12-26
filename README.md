@@ -14,7 +14,7 @@
 pnpm install
 
 # Start development server
-pnpm dev
+pnpm start
 
 # Build for production
 pnpm build
@@ -36,34 +36,35 @@ pnpm format
 
 ```
 src/
-├── app/                   # Configuracion principal de la aplicación
+├── app/                   # Routes configuration
 │   └── App.tsx
 ├── assets/                # Contenido estatico
 │   └── styles/
 │       └── index.css      # Global styles
 ├── components/            # Reusable components
-│   └── shared/            # Componentes reutilizables en la app
-│       └── Header/
-├── layouts/               # Contenedor de layouts
-│   └── Layout.tsx
+│   ├── auth/
+│   └── shared/
+│       └── header.tsx
 ├── pages/                 # Pages
-│   ├── About.tsx
-│   ├── Home.tsx
+│   ├── auth
+|   |   └── sign-up.tsx
 │   └── index.ts
-├── routes/                # Routes configuration
-│   └── index.tsx
+├── libs/                  # lib
+├── hooks/                 # Custom hooks
+├── context/               # React contexts
+├── utils/                 # Utils functions
 ├── types/                 # Type declarations
 │   └── app.d.ts
 ├── vite-env.d.ts
-└── main.tsx               # Entrada principal de la aplicación
+└── main.tsx               # Provider configuration
 ```
 
 ## ⚙️ Technologies
 
-- [React 18](https://reactjs.org/)
+- [React 19](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
-- [Material-UI](https://mui.com/)
+- [Shadcn](https://ui.shadcn.com/)
 - [React Router](https://reactrouter.com/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
